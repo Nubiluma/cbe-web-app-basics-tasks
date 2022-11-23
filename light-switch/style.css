@@ -1,0 +1,54 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: monospace;
+  height: 100%;
+}
+
+:root {
+  --clr-white: white;
+  --clr-darkgray: rgb(49, 49, 49);
+  --clr-yellow: yellow;
+}
+
+body {
+  transition: background-color 1s ease-in-out;
+
+  background-color: var(--clr-white);
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  border: 0.25rem solid var(--clr-darkgray);
+  padding-block: 0.75rem;
+  padding-inline: 1rem;
+
+  color: var(--clr-darkgray);
+  background-color: var(--clr-white);
+
+  font-size: 2rem;
+
+  cursor: pointer;
+}
+
+.body--dark {
+  background-color: var(--clr-darkgray);
+}
+
+.button--dark {
+  border: 0.25rem solid var(--clr-white);
+  background-color: var(--clr-darkgray);
+  color: var(--clr-white);
+
+  box-shadow: 0 0 5px var(--clr-yellow), 0 0 10px var(--clr-yellow),
+    0 0 20px var(--clr-yellow);
+}
