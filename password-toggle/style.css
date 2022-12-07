@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: monospace;
+  font-size: 16px;
+  text-align: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/*******************************************************************/
+
+.pad-block-2rem {
+  padding-block: 1rem;
+}
+
+.pad-inline-p25rem {
+  padding-inline: 0.25rem;
+}
+
+.margin-left-p5rem {
+  margin-left: 0.5rem;
+}
+
+.font-sz-2rem {
+  font-size: 2rem;
+}
+
+.font-monospace {
+  font-family: monospace;
+}
+
+.flex-r-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
