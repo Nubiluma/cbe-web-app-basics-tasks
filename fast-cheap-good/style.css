@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  text-align: start;
+  font-family: monospace;
+  font-size: 16px;
+  height: 100%;
+}
+
+/***********************************************************************/
+
+.pad-left-p5rem {
+  padding-left: 0.5rem;
+}
+
+.font-sz-2rem {
+  font-size: 2rem;
+}
+
+.flex-r-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-c-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex-self-align-start {
+  align-self: flex-start;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
