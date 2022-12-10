@@ -4,11 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Counter</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Counter</title>
   </head>
   <body>
-    <main class="main" id="counter"></main>
+    <header class="pad-1rem bg-clr-gold flex-c-fs-c">
+      <div class="flex-grow-1">
+        <h1 class="font-sz-2rem">Counter</h1>
+        <h2 class="font-sz-1rem">
+          (click the white area or hit space / enter to count)
+        </h2>
+      </div>
+
+      <button>Reset</button>
+    </header>
+    <main class="flex-c-c-c" id="click-area">
+      <label class="" id="counter-label">0</label>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

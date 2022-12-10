@@ -1,4 +1,53 @@
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+/****************************************************************************************************/
+
+.pad-1rem {
+  padding: 1rem;
+}
+
+.bg-clr-gold {
+  background-color: gold;
+}
+
+.font-sz-1rem {
+  font-size: 1rem;
+}
+
+.font-sz-1p5rem {
+  font-size: 1.5rem;
+}
+
+.font-sz-2rem {
+  font-size: 2rem;
+}
+
+.flex-c-c-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-c-fs-c {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
 }

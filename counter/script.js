@@ -1,8 +1,19 @@
 let counter = 0;
 
-const countArea = document.querySelector("#counter");
+const clickArea = document.getElementById("click-area");
+const counterDisplay = document.getElementById("counter-label");
 
-countArea.addEventListener("click", function () {});
+clickArea.addEventListener("click", () => {
+  counter++;
+  counterDisplay.innerText = counter;
+});
 
-//global scope for key pressing
-document.addEventListener("keyup", function (e) {});
+//use global scope for keyboard input
+document.addEventListener("keyup", () => {
+  counter++;
+  counterDisplay.innerText = counter;
+});
+
+/******************************************************/
+
+function changeColorAtCount() {}
