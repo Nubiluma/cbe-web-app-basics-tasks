@@ -14,10 +14,19 @@ main {
   font-size: 16px;
 }
 
+main {
+  background-image: linear-gradient(gold, gold);
+  background-repeat: no-repeat;
+}
+
 /****************************************************************************************************/
 
 .pad-1rem {
   padding: 1rem;
+}
+
+.heigth-100 {
+  height: 100%;
 }
 
 .bg-clr-gold {
@@ -27,22 +36,23 @@ main {
 .font-sz-1rem {
   font-size: 1rem;
 }
-
 .font-sz-1p5rem {
   font-size: 1.5rem;
 }
-
 .font-sz-2rem {
   font-size: 2rem;
 }
 
-.flex-c-c-c {
+.pos-fixed {
+  position: fixed;
+}
+
+.flex-r-c-c {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.flex-c-fs-c {
+.flex-r-fs-c {
   display: flex;
   justify-content: flex-start;
   align-items: center;
