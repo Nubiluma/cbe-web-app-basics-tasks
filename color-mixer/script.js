@@ -1,4 +1,4 @@
-const header = document.querySelector("header");
+const body = document.querySelector("body");
 const sliderRed = document.querySelector("#sliderRed");
 const sliderGreen = document.querySelector("#sliderGreen");
 const sliderBlue = document.querySelector("#sliderBlue");
@@ -8,25 +8,40 @@ const MAX_HEX = 16;
 const sliders = [sliderRed, sliderGreen, sliderBlue];
 
 for (const slider of sliders) {
-  slider.addEventListener("input", setHexValue);
+  slider.addEventListener("input", setHexColorValue);
+  slider.addEventListener("input", updateBackgroundColor);
 }
 
-setHexValue();
+setRandomColorOnStart();
+setHexColorValue();
+updateBackgroundColor();
 
 /********************************************/
 
-function setHexValue() {
+function setHexColorValue() {
   hexValue.innerText =
-    "#" +
-    convertRgbToHex(
-      parseInt(sliderRed.value),
-      parseInt(sliderGreen.value),
-      parseInt(sliderBlue.value)
-    );
+    "#" + convertRgbToHex(sliderRed.value, sliderGreen.value, sliderBlue.value);
+}
+
+function updateBackgroundColor() {
+  body.setAttribute(
+    "bgColor",
+    convertRgbToHex(sliderRed.value, sliderGreen.value, sliderBlue.value)
+  );
+}
+
+function setRandomColorOnStart() {
+  for (const slider of sliders) {
+    slider.setAttribute("value", Math.random() * 255);
+  }
 }
 
 function convertRgbToHex(r, g, b) {
-  return convertValueToHex(r) + convertValueToHex(g) + convertValueToHex(b);
+  return (
+    convertValueToHex(parseInt(r)) +
+    convertValueToHex(parseInt(g)) +
+    convertValueToHex(parseInt(b))
+  );
 }
 
 function convertValueToHex(value) {
