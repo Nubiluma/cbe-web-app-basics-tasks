@@ -1,4 +1,6 @@
 const body = document.querySelector("body");
+const form = document.querySelector("#headerForm");
+const refreshBtn = document.querySelector("#refreshBtn");
 const sliderRed = document.querySelector("#sliderRed");
 const sliderGreen = document.querySelector("#sliderGreen");
 const sliderBlue = document.querySelector("#sliderBlue");
@@ -12,7 +14,9 @@ for (const slider of sliders) {
   slider.addEventListener("input", updateBackgroundColor);
 }
 
-setRandomColorOnStart();
+refreshBtn.addEventListener("click", setRandomColor);
+
+setRandomColor();
 setHexColorValue();
 updateBackgroundColor();
 
@@ -30,7 +34,7 @@ function updateBackgroundColor() {
   );
 }
 
-function setRandomColorOnStart() {
+function setRandomColor() {
   for (const slider of sliders) {
     slider.setAttribute("value", Math.random() * 255);
   }
