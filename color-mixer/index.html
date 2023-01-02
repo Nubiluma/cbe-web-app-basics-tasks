@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Color Mixer</title>
+  </head>
+  <body>
+    <header>
+      <form>
+        <input
+          type="range"
+          step="1"
+          min="0"
+          max="255"
+          value="50"
+          name="red"
+          id="sliderRed"
+          class="sliderRed"
+        />
+        <input
+          type="range"
+          step="1"
+          min="0"
+          max="255"
+          value="50"
+          name="green"
+          id="sliderGreen"
+          class="sliderGreen"
+        />
+        <input
+          type="range"
+          step="1"
+          min="0"
+          max="255"
+          value="150"
+          name="blue"
+          id="sliderBlue"
+          class="sliderBlue"
+        />
+      </form>
+      <span id="hexValue"></span>
+    </header>
+    <main></main>
+    <script src="script.js"></script>
+  </body>
+</html>
