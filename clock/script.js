@@ -5,6 +5,9 @@ setTimeOnDigitalClock();
 
 /***********************************************/
 
+/**
+ * render hours, minutes and seconds on digital clock every second
+ */
 function setTimeOnDigitalClock() {
   setInterval(() => {
     let hours = new Date().getHours();
@@ -21,7 +24,14 @@ function setTimeOnDigitalClock() {
       seconds = "0" + seconds;
     }
 
-    digitalClock.innerText = hours + ":" + minutes + ":" + seconds;
+    /**
+     * render devide symbol every other second on clock
+     */
+    if (digitalClock.innerText.includes(":")) {
+      digitalClock.innerText = hours + " " + minutes + " " + seconds;
+    } else {
+      digitalClock.innerText = hours + ":" + minutes + ":" + seconds;
+    }
   }, 1000);
 }
 
