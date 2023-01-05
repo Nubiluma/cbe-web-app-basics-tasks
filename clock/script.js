@@ -25,7 +25,7 @@ function setTimeOnDigitalClock() {
     }
 
     /**
-     * render devide symbol every other second on clock
+     * render colons every other second on clock
      */
     if (digitalClock.innerText.includes(":")) {
       digitalClock.innerText = hours + " " + minutes + " " + seconds;
