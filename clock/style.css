@@ -30,5 +30,8 @@ body {
 
 .digitalClock {
   margin-top: 2rem;
+  width: 24rem;
+  height: 3rem;
   font-size: 2rem;
+  text-align: center;
 }

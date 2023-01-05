@@ -1,6 +1,10 @@
 const analogClock = document.querySelector("#analogClock");
 const digitalClock = document.querySelector("#digitalClock");
 
+let hours = new Date().getHours();
+let minutes = new Date().getMinutes();
+let seconds = new Date().getSeconds();
+
 setTimeOnDigitalClock();
 
 /***********************************************/
@@ -9,20 +13,15 @@ setTimeOnDigitalClock();
  * render hours, minutes and seconds on digital clock every second
  */
 function setTimeOnDigitalClock() {
-  setInterval(() => {
-    let hours = new Date().getHours();
-    if (hours < 10) {
-      hours = "0" + hours;
-    }
-    let minutes = new Date().getMinutes();
-    if (minutes < 10) {
-      minutes = "0" + minutes;
-    }
+  formatSingleDigits();
+  digitalClock.innerText = hours + ":" + minutes + ":" + seconds;
 
-    let seconds = new Date().getSeconds();
-    if (seconds < 10) {
-      seconds = "0" + seconds;
-    }
+  setInterval(() => {
+    hours = new Date().getHours();
+    minutes = new Date().getMinutes();
+    seconds = new Date().getSeconds();
+
+    formatSingleDigits();
 
     /**
      * render colons every other second on clock
@@ -33,6 +32,18 @@ function setTimeOnDigitalClock() {
       digitalClock.innerText = hours + ":" + minutes + ":" + seconds;
     }
   }, 1000);
+}
+
+function formatSingleDigits() {
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
 }
 
 //TODO
