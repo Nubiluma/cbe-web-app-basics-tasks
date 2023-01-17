@@ -9,6 +9,10 @@ html {
   height: 100%;
   font-size: 16px;
   font-family: monospace;
+
+  --pointer-seconds-degree: 0deg;
+  --pointer-minutes-degree: 0deg;
+  --pointer-hours-degree: 0deg;
 }
 
 body {
@@ -26,6 +30,36 @@ body {
   background-color: white;
   border: 0.25rem solid black;
   border-radius: 12rem;
+  position: relative;
+}
+
+.pointer {
+  position: absolute;
+  background-color: black;
+  border-radius: 0.25rem;
+  top: 50%;
+  transform-origin: top;
+}
+
+.seconds {
+  left: 49.65%;
+  width: 0.75%;
+  height: 49%;
+  transform: rotate(var(--pointer-seconds-degree));
+}
+
+.minutes {
+  left: 49.5%;
+  width: 1%;
+  height: 48%;
+  transform: rotate(var(--pointer-minutes-degree));
+}
+
+.hours {
+  left: 49.25%;
+  width: 1.5%;
+  height: 30%;
+  transform: rotate(var(--pointer-hours-degree));
 }
 
 .digitalClock {

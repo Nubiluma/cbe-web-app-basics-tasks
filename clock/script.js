@@ -5,14 +5,19 @@ let hours = new Date().getHours();
 let minutes = new Date().getMinutes();
 let seconds = new Date().getSeconds();
 
-setTimeOnDigitalClock();
+let pointerSecondsDegree = 0;
+let pointerMinutesDegree = 0;
+let pointerHoursDegree = 0;
+
+setTimeOnClocks();
+setPointerDegreesOnCustomProperty();
 
 /***********************************************/
 
 /**
  * render hours, minutes and seconds on digital clock every second
  */
-function setTimeOnDigitalClock() {
+function setTimeOnClocks() {
   formatSingleDigits();
   digitalClock.innerText = hours + ":" + minutes + ":" + seconds;
 
@@ -22,6 +27,7 @@ function setTimeOnDigitalClock() {
     seconds = new Date().getSeconds();
 
     formatSingleDigits();
+    setPointerDegreesOnCustomProperty();
 
     /**
      * render colons every other second on clock
@@ -46,5 +52,24 @@ function formatSingleDigits() {
   }
 }
 
-//TODO
-function setTimeOnAnalogClock() {}
+function calculatePointerDegrees() {
+  pointerSecondsDegree = (360 / 60) * seconds + 180;
+  pointerMinutesDegree = (360 / 60) * minutes + 180;
+  pointerHoursDegree = (360 / 12) * hours + 180;
+}
+
+function setPointerDegreesOnCustomProperty() {
+  calculatePointerDegrees();
+  document.documentElement.style.setProperty(
+    "--pointer-seconds-degree",
+    pointerSecondsDegree + "deg"
+  );
+  document.documentElement.style.setProperty(
+    "--pointer-minutes-degree",
+    pointerMinutesDegree + "deg"
+  );
+  document.documentElement.style.setProperty(
+    "--pointer-hours-degree",
+    pointerHoursDegree + "deg"
+  );
+}
