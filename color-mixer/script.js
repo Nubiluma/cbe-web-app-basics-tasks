@@ -14,19 +14,16 @@ for (const slider of sliders) {
   slider.addEventListener("input", updateBackgroundColor);
 }
 
-refreshBtn.addEventListener("click", setRandomColor);
+refreshBtn.addEventListener("click", getRandomColorFromAPI);
 
-setRandomColor();
-setHexColorValue();
+getRandomColorFromAPI();
 updateBackgroundColor();
 
 /********************************************/
 
-function setHexColorValue() {
-  hexValue.innerText =
-    "#" + convertRgbToHex(sliderRed.value, sliderGreen.value, sliderBlue.value);
-}
-
+/**
+ * update background color of app
+ */
 function updateBackgroundColor() {
   body.setAttribute(
     "bgColor",
@@ -34,12 +31,39 @@ function updateBackgroundColor() {
   );
 }
 
-function setRandomColor() {
-  for (const slider of sliders) {
-    slider.setAttribute("value", Math.random() * 255);
-  }
+/**
+ * render hex color code
+ */
+function setHexColorValue() {
+  hexValue.innerText =
+    "#" + convertRgbToHex(sliderRed.value, sliderGreen.value, sliderBlue.value);
 }
 
+/**
+ * fetch random color from api
+ * then update sliders, render hex code and update background color accordingly
+ */
+function getRandomColorFromAPI() {
+  fetch("https://dummy-apis.netlify.app/api/color")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      sliderRed.setAttribute("value", data.rgb.r);
+      sliderGreen.setAttribute("value", data.rgb.g);
+      sliderBlue.setAttribute("value", data.rgb.b);
+      hexValue.innerText = data.color;
+      updateBackgroundColor();
+    });
+}
+
+/**
+ * convert rgb value to hex value
+ * @param {*} r red value
+ * @param {*} g green value
+ * @param {*} b blue value
+ * @returns
+ */
 function convertRgbToHex(r, g, b) {
   return (
     convertValueToHex(parseInt(r)) +
@@ -48,6 +72,18 @@ function convertRgbToHex(r, g, b) {
   );
 }
 
+/**
+ * convert single value to hex code
+ * @param {*} value r, g or b
+ * @returns hex code
+ */
 function convertValueToHex(value) {
   return value.toString(MAX_HEX);
 }
+
+/* function setRandomColor() {
+  for (const slider of sliders) {
+    slider.setAttribute("value", Math.random() * 255);
+  }
+}
+ */
