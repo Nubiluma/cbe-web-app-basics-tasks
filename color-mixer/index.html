@@ -9,43 +9,49 @@
   </head>
   <body>
     <header>
-      <form>
-        <button id="refreshBtn" class="refreshBtn">🔄️</button>
-        <label for="red">R</label>
-        <input
-          type="range"
-          step="1"
-          min="0"
-          max="255"
-          value="50"
-          name="red"
-          id="sliderRed"
-          class="sliderRed"
-        />
-        <label for="green">G</label>
-        <input
-          type="range"
-          step="1"
-          min="0"
-          max="255"
-          value="50"
-          name="green"
-          id="sliderGreen"
-          class="sliderGreen"
-        />
-        <label for="blue">B</label>
-        <input
-          type="range"
-          step="1"
-          min="0"
-          max="255"
-          value="150"
-          name="blue"
-          id="sliderBlue"
-          class="sliderBlue"
-        />
+      <form class="color-sliders-form">
+        <span class="slider">
+          <label for="red">R</label>
+          <input
+            type="range"
+            step="1"
+            min="0"
+            max="255"
+            value="50"
+            name="red"
+            id="sliderRed"
+            class="sliderRed"
+          />
+        </span>
+        <span class="slider">
+          <label for="green">G</label>
+          <input
+            type="range"
+            step="1"
+            min="0"
+            max="255"
+            value="50"
+            name="green"
+            id="sliderGreen"
+            class="sliderGreen"
+          />
+        </span>
+        <span class="slider">
+          <label for="blue">B</label>
+          <input
+            type="range"
+            step="1"
+            min="0"
+            max="255"
+            value="150"
+            name="blue"
+            id="sliderBlue"
+            class="sliderBlue"
+          />
+        </span>
       </form>
       <span id="hexValue"></span>
+      <button class="refreshBtn">🔄️</button>
     </header>
     <script src="script.js"></script>
   </body>

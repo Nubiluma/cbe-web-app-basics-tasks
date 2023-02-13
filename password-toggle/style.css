@@ -74,3 +74,11 @@ body {
 .flex-grow1 {
   flex-grow: 1;
 }
+
+.flex-gap {
+  gap: 1rem;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

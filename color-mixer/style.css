@@ -36,6 +36,17 @@ label {
 
 /**********************************************************/
 
+.color-sliders-form {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.slider {
+  padding-right: 2rem;
+}
+
 .sliderRed {
   accent-color: red;
 }
@@ -48,10 +59,13 @@ label {
   accent-color: blue;
 }
 
+#hexValue {
+  padding-inline: 0.5rem;
+}
+
 .refreshBtn {
   font-size: 1.5rem;
-  padding: 0;
-  padding-bottom: 0.16rem;
+  padding-inline: 0.5rem;
   border-radius: 0.25rem;
   border-style: none;
   background-color: transparent;

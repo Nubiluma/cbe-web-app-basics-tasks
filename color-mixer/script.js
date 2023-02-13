@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 const form = document.querySelector("#headerForm");
-const refreshBtn = document.querySelector("#refreshBtn");
+const refreshBtn = document.querySelector(".refreshBtn");
 const sliderRed = document.querySelector("#sliderRed");
 const sliderGreen = document.querySelector("#sliderGreen");
 const sliderBlue = document.querySelector("#sliderBlue");
