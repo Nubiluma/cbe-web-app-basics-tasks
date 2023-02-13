@@ -53,9 +53,9 @@ function formatSingleDigits() {
 }
 
 function calculatePointerDegrees() {
-  pointerSecondsDegree = (360 / 60) * seconds + 180;
-  pointerMinutesDegree = (360 / 60) * minutes + 180;
-  pointerHoursDegree = (360 / 12) * hours + 180;
+  pointerSecondsDegree = (360 / 60) * seconds;
+  pointerMinutesDegree = (360 / 60) * minutes;
+  pointerHoursDegree = (360 / 12) * hours + pointerMinutesDegree / 12;
 }
 
 function setPointerDegreesOnCustomProperty() {

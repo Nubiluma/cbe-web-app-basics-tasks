@@ -30,36 +30,48 @@ body {
   background-color: white;
   border: 0.25rem solid black;
   border-radius: 12rem;
+  box-shadow: 0.2rem 0.2rem 0.18rem rgb(37, 37, 37);
   position: relative;
+}
+
+.clockMiddle {
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  background-color: black;
+  border-radius: 100%;
+  bottom: 50%;
+  left: 50%;
+  translate: -50% 50%;
+  transform-origin: bottom center;
 }
 
 .pointer {
   position: absolute;
   background-color: black;
   border-radius: 0.25rem;
-  top: 50%;
-  transform-origin: top;
+  bottom: 50%;
+  left: 50%;
+  translate: -50%;
+  transform-origin: bottom center;
 }
 
 .seconds {
-  left: 49.65%;
   width: 0.75%;
   height: 49%;
-  transform: rotate(var(--pointer-seconds-degree));
+  rotate: var(--pointer-seconds-degree);
 }
 
 .minutes {
-  left: 49.5%;
   width: 1%;
   height: 48%;
-  transform: rotate(var(--pointer-minutes-degree));
+  rotate: var(--pointer-minutes-degree);
 }
 
 .hours {
-  left: 49.25%;
   width: 1.5%;
   height: 30%;
-  transform: rotate(var(--pointer-hours-degree));
+  rotate: var(--pointer-hours-degree);
 }
 
 .digitalClock {
