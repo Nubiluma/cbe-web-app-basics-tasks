@@ -15,6 +15,25 @@ body {
 
 /***********************************************************************/
 
+.site-footer {
+  padding: 1.5rem 1rem;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.site-nav {
+  padding: 2rem 1rem;
+}
+
+.site-nav a {
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+}
+
+/***********************************************************************/
+
 .pad-left-p5rem {
   padding-left: 0.5rem;
 }
@@ -34,4 +53,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.flex-grow1 {
+  flex-grow: 1;
 }

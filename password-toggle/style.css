@@ -19,6 +19,25 @@ body {
 
 /*******************************************************************/
 
+.site-footer {
+  padding: 1.5rem 1rem;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
+
+.site-nav {
+  padding: 2rem 1rem;
+}
+
+.site-nav a {
+  font-size: 1.5rem;
+  padding: 1rem 0.5rem;
+  text-decoration: none;
+}
+
+/*******************************************************************/
+
 .pad-block-2rem {
   padding-block: 1rem;
 }
@@ -43,4 +62,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.flex-c-c-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-grow1 {
+  flex-grow: 1;
 }
