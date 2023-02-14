@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Fast-Cheap-Good</title>
   </head>
   <body class="flex-c-c-c font-sz-2rem">
     <main class="flex-c-c-c flex-grow1">
@@ -22,11 +23,14 @@
         <label for="good" class="pad-left-p5rem">Good</label>
       </div>
     </main>
-    <footer class="site-footer">
-      <nav class="site-nav">
-        <a href="/">Main Page</a>
-      </nav>
-    </footer>
+
+    <aside class="home-link-wrapper">
+      <a href="/" class="home-link"><i data-feather="home"></i></a>
+    </aside>
+    <script src="/home.svg"></script>
+    <script>
+      feather.replace();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

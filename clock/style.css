@@ -90,19 +90,21 @@ main {
   text-align: center;
 }
 
-.site-footer {
-  padding: 1.5rem 1rem;
-  width: 100vw;
+.home-link-wrapper {
+  position: absolute;
+  border: 0.15rem solid black;
   background-color: rgba(255, 255, 255, 0.5);
-  text-align: center;
+  padding: 0.5rem;
+  padding-top: 0.6rem;
+  bottom: 0;
+  left: 0;
 }
 
-.site-nav {
-  padding: 2rem 1rem;
-}
-
-.site-nav a {
-  font-size: 1.5rem;
-  padding: 1rem 0.5rem;
+.home-link {
   text-decoration: none;
+  color: black;
+}
+
+.home-link:hover {
+  color: rgba(0, 0, 0, 0.5);
 }

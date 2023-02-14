@@ -17,6 +17,7 @@ html {
 }
 
 body {
+  position: relative;
   transition: background-color 1s ease-in-out;
 
   background-color: var(--clr-white);
@@ -51,4 +52,23 @@ body {
 
   box-shadow: 0 0 5px var(--clr-yellow), 0 0 10px var(--clr-yellow),
     0 0 20px var(--clr-yellow);
+}
+
+.home-link-wrapper {
+  position: absolute;
+  border: 0.15rem solid black;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+  padding-top: 0.6rem;
+  bottom: 0;
+  left: 0;
+}
+
+.home-link {
+  text-decoration: none;
+  color: black;
+}
+
+.home-link:hover {
+  color: rgba(0, 0, 0, 0.5);
 }
