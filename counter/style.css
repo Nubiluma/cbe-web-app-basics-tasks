@@ -7,19 +7,30 @@
 }
 
 html,
-body,
-main {
+body {
   height: 100%;
   font-family: monospace;
   font-size: 16px;
+  overflow: hidden;
 }
 
 main {
+  height: 100%;
   background-image: linear-gradient(gold, gold);
   background-repeat: no-repeat;
 }
 
 /****************************************************************************************************/
+
+.counter-label::selection {
+  background-color: transparent;
+}
+
+.reset-btn {
+  font-family: monospace;
+  font-size: 1.25rem;
+  padding: 0.25rem 0.5rem;
+}
 
 .home-link-wrapper {
   position: absolute;
@@ -62,6 +73,9 @@ main {
 }
 .font-sz-2rem {
   font-size: 2rem;
+}
+.font-sz-4rem {
+  font-size: 4rem;
 }
 
 .pos-fixed {

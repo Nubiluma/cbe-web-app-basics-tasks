@@ -1,23 +1,32 @@
 let counter = 0;
 
-const clickArea = document.getElementById("click-area");
-const bar = document.getElementById("bar");
-const counterDisplay = document.getElementById("counter-label");
+const resetBtn = document.querySelector(".reset-btn");
+const clickArea = document.querySelector(".click-area");
+const counterDisplay = document.querySelector(".counter-label");
 
-clickArea.addEventListener("click", () => {
-  counter++;
+clickArea.addEventListener("click", count);
+
+//use global scope for keyboard input
+document.addEventListener("keyup", count);
+
+resetBtn.addEventListener("click", () => {
+  counter = 0;
   counterDisplay.innerText = counter;
   changeColorAtCount();
 });
 
-//use global scope for keyboard input
-document.addEventListener("keyup", () => {
-  counter++;
-  counterDisplay.innerText = counter;
-});
-
 changeColorAtCount();
 /******************************************************/
+
+function count() {
+  if (counter < 100) {
+    counter++;
+  } else {
+    counter = 0;
+  }
+  counterDisplay.innerText = counter;
+  changeColorAtCount();
+}
 
 function changeColorAtCount() {
   clickArea.style.backgroundSize = `${counter}% 100%`;
