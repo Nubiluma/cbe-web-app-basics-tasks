@@ -9,17 +9,17 @@
     <title>Fast-Cheap-Good</title>
   </head>
   <body class="flex-c-c-c font-sz-2rem">
-    <main class="flex-c-c-c flex-grow1">
+    <main id="app" class="flex-c-c-c flex-grow1">
       <div class="flex-r-c-c">
-        <input type="checkbox" name="fast" id="checkFast" />
+        <input type="checkbox" value="fast" id="fast" v-model="checkboxes" />
         <label for="fast" class="pad-left-p5rem">Fast</label>
       </div>
       <div class="flex-r-c-c">
-        <input type="checkbox" name="cheap" id="checkCheap" />
+        <input type="checkbox" value="cheap" id="cheap" v-model="checkboxes" />
         <label for="cheap" class="pad-left-p5rem">Cheap</label>
       </div>
       <div class="flex-r-c-c">
-        <input type="checkbox" name="good" id="checkGood" />
+        <input type="checkbox" value="good" id="good" v-model="checkboxes" />
         <label for="good" class="pad-left-p5rem">Good</label>
       </div>
     </main>
@@ -31,6 +31,7 @@
     <script>
       feather.replace();
     </script>
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="script.js"></script>
   </body>
 </html>

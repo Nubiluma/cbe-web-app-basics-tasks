@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/feather-icons"></script>
   </head>
-  <body>
-    <button class="button">Toggle Light</button>
+  <body id="app">
+    <button
+      @click="toggleDarkmodeOnBody"
+      :class="{'button--dark':darkmode}"
+      class="button"
+    >
+      Toggle Light
+    </button>
     <aside class="home-link-wrapper">
       <a href="../" class="home-link"><i data-feather="home"></i></a>
     </aside>
@@ -17,6 +23,7 @@
     <script>
       feather.replace();
     </script>
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="script.js"></script>
   </body>
 </html>

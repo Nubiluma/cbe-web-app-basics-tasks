@@ -8,19 +8,20 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <title>Counter</title>
   </head>
-  <body>
+  <body id="app">
     <header class="pad-1rem bg-clr-gold flex-r-fs-c">
       <div class="flex-grow-1">
         <h1 class="font-sz-2rem">Counter</h1>
-        <h2 class="font-sz-1rem">
-          (click the white area or hit space / enter to count)
-        </h2>
+        <h2 class="font-sz-1rem">(click the white area to count)</h2>
       </div>
-
-      <button class="reset-btn">Reset</button>
+      <button @click="resetCounter" class="reset-btn">Reset</button>
     </header>
-    <main class="flex-r-c-c click-area">
-      <label class="counter-label font-sz-4rem pos-fixed">0</label>
+    <main
+      @click="count"
+      class="flex-r-c-c click-area"
+      :style="{backgroundSize: backgroundSize}"
+    >
+      <label class="counter-label font-sz-4rem pos-fixed">{{counter}}</label>
     </main>
     <aside class="home-link-wrapper">
       <a href="../" class="home-link"><i data-feather="home"></i></a>
@@ -29,6 +30,7 @@
     <script>
       feather.replace();
     </script>
+    <script src="https://unpkg.com/vue@next"></script>
     <script src="script.js"></script>
   </body>
 </html>
